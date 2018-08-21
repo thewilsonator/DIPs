@@ -71,7 +71,7 @@ Again, due to C++ implicit conversions, using the `__dslice` in the example head
 if necessary, be cast to `gsl::span`/`std::span` such that the C++ code can still be conformant to the C++ core guidelines.
 
 ```C++
-// Defined in D as extern(C++) char[] baz() { ... }
+// Defined in D as extern(C++) const(char)[] baz() { ... }
 __dslice<const char> baz();
 void takesASpan(std::span<const char> s);
 void quux()
